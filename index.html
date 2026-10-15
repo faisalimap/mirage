@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mirage - Custom Link Previews</title>
+<meta name="description" content="Create short links with a custom title and description preview. Links expire in 3 days.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="top">
+    <img src="favicon.svg" alt="Mirage logo" class="logo">
+    <p class="by">Mirage by CupX Corporation</p>
+    <a class="back" href="https://cupx.in">&larr; Back to Home</a>
+    <h1>Mirage</h1>
+    <p class="tag">Custom link previews. Opens as a 404.</p>
+  </header>
+
+  <section class="card">
+    <label for="t">Title <span class="count" id="tc">0/70</span></label>
+    <input id="t" maxlength="70" placeholder="Preview title" autocomplete="off">
+
+    <label for="d">Description <span class="count" id="dc">0/200</span></label>
+    <textarea id="d" maxlength="200" rows="3" placeholder="Preview description"></textarea>
+
+    <div class="pv" aria-label="Preview">
+      <div class="pv-host">mrg.qd.je</div>
+      <div class="pv-title" id="pt">Your title appears here</div>
+      <div class="pv-desc" id="pd">Your description appears here</div>
+    </div>
+
+    <div id="ts"></div>
+    <button id="go" class="btn">Generate Link</button>
+    <p id="err" class="err" role="alert"></p>
+
+    <div id="res" class="res" hidden>
+      <div class="res-label">Your link</div>
+      <a id="lnk" href="#" target="_blank" rel="noopener noreferrer"></a>
+      <button id="cp" class="btn ghost">Copy</button>
+      <p class="note">Expires in 3 days. Instagram caches previews, so make a new link instead of editing.</p>
+    </div>
+  </section>
+
+  <p class="rules">No impersonation, links, phone numbers, scams or adult content. Violations are rejected.
+  Report abuse: <a href="mailto:abuse@cupx.in">abuse@cupx.in</a></p>
+
+  <footer>&copy; 2026 All rights reserved | <a href="https://cupx.in">CupX Corporation</a></footer>
+</main>
+
+<script src="app.js"></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTs" async defer></script>
+</body>
+</html>

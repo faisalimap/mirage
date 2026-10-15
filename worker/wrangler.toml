@@ -1,0 +1,16 @@
+name = "mirage-api"
+main = "index.js"
+compatibility_date = "2025-01-01"
+
+[vars]
+GH_REPO = "hqfm/mrg"
+LINK_DOMAIN = "mrg.qd.je"
+ALLOWED_ORIGIN = "https://mirage.cupx.in"
+
+[[ratelimits]]
+name = "RATE"
+namespace_id = "1001"
+simple = { limit = 5, period = 60 }
+
+# Only if cupx.in is on Cloudflare; otherwise remove and use the workers.dev URL.
+# routes = [{ pattern = "api.mirage.cupx.in", custom_domain = true }]
