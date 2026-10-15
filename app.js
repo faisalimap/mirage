@@ -1,7 +1,7 @@
 // ---- CONFIG: edit these two lines ----
 const CONFIG = {
-  API: "https://api.mirage.cupx.in/create",   // your Worker URL + /create
-  SITEKEY: "YOUR_TURNSTILE_SITE_KEY"
+  API: "https://mirage-api.faisalimap.workers.dev/create",   // your Worker URL + /create
+  SITEKEY: "0x4AAAAAAFX43BML4mnPgdv3"
 };
 // --------------------------------------
 const $ = id => document.getElementById(id);
