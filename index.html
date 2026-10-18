@@ -4,9 +4,28 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mirage - Custom Link Previews</title>
-<meta name="description" content="Create short links with a custom title and description preview. Links expire in 3 days.">
+<meta name="description" content="Create short links with a custom title and description preview. The page itself opens as a 404. Links expire in 3 days.">
+<meta property="og:title" content="Mirage - Custom Link Previews">
+<meta property="og:description" content="Short links with a custom title and description. Opens as a 404. Expires in 3 days.">
+<meta property="og:type" content="website">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
+<style>
+  .about{margin-top:26px}
+  .about h2{font-size:18px;margin:0 0 10px}
+  .about p,.about li{font-size:14px;line-height:1.6;color:var(--mu)}
+  .about p{margin:0 0 12px}
+  .about strong{color:var(--tx)}
+  .box{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:18px 20px;margin-top:14px}
+  .steps{margin:0;padding-left:20px}
+  .steps li{margin-bottom:8px}
+  .box ul{margin:0;padding-left:20px}
+  .box ul li{margin-bottom:6px}
+  details{border-top:1px solid var(--bd);padding:10px 0}
+  details:first-of-type{border-top:0}
+  summary{cursor:pointer;font-size:14px;font-weight:600;color:var(--tx)}
+  details p{margin:8px 0 0}
+</style>
 </head>
 <body>
 <main class="wrap">
@@ -43,8 +62,50 @@
     </div>
   </section>
 
-  <p class="rules">No impersonation, links, phone numbers, scams or adult content. Violations are rejected.
-  Report abuse: <a href="mailto:abuse@cupx.in">abuse@cupx.in</a></p>
+  <section class="about" id="about">
+    <h2>What is Mirage?</h2>
+    <p>Chat apps like Instagram, WhatsApp and X read a link's <strong>title</strong> and <strong>description</strong> and show them as a preview card. Mirage lets you choose exactly what that card says, then gives you a short link on <strong>mrg.qd.je</strong>.</p>
+    <p>Anyone who opens the link sees a plain <strong>404 Not Found</strong> page. The preview is the only thing it is made to show.</p>
+
+    <div class="box">
+      <h2>Why does it open as a 404?</h2>
+      <p>The page exists only to carry preview text. It has no content, no scripts, no tracking and no forms, so there is nothing to find behind the link. The 404 look keeps it clean and makes it obvious the page is not a real site.</p>
+      <p>Behind the scenes it is served with a normal success status so chat apps will read the preview. People just see the 404.</p>
+    </div>
+
+    <div class="box">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li>You enter a title and description and pass a captcha.</li>
+        <li>A server checks the text and creates a page with a random 6 to 7 character slug.</li>
+        <li>You get <strong>mrg.qd.je/slug</strong>. Paste it into any chat to see the preview.</li>
+        <li>The page is deleted automatically after 3 days.</li>
+      </ol>
+    </div>
+
+    <div class="box">
+      <h2>Good uses</h2>
+      <ul>
+        <li>Testing how a link preview looks in a chat app</li>
+        <li>Mockups and screenshots for designs and demos</li>
+        <li>Teasers, announcements and short-lived notes</li>
+        <li>Learning how Open Graph previews work</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h2>Not allowed</h2>
+      <p>Impersonating people, brands, banks or the government. Scams, fake alerts, adult content, links, phone numbers and emails. Such text is rejected, and you can report abuse at <a href="mailto:abuse@cupx.in">abuse@cupx.in</a>.</p>
+    </div>
+
+    <div class="box">
+      <h2>FAQ</h2>
+      <details><summary>Can I edit a link later?</summary><p>No. Chat apps cache previews, so an edit would not show. Create a new link instead.</p></details>
+      <details><summary>Does it store my data?</summary><p>Only the title and description you enter, inside the link page, for 3 days. Nothing else is kept about you.</p></details>
+      <details><summary>Can I add an image?</summary><p>Not yet. Previews are text only.</p></details>
+      <details><summary>Why is there a captcha?</summary><p>To stop bots from flooding the service with links.</p></details>
+    </div>
+  </section>
 
   <footer>&copy; 2026 All rights reserved | <a href="https://cupx.in">CupX Corporation</a></footer>
 </main>
